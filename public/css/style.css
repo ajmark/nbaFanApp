@@ -1,2 +1,59 @@
 @import url(http://fonts.googleapis.com/css?family=Arvo|Open+Sans:400,300,700);
 
+/**************************/
+/*    HTML Elements & Template Layouts    */
+/**************************/
+
+* {
+	padding:0;
+	margin:0;
+}
+
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+}
+
+li {
+	font-weight:300;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color:white;
+	font-size:12px;
+}
+
+/**************************/
+/*   Headlines Page    */
+/**************************/
+.side-nav {
+	background-color: #999999;
+	float:left;
+	width:270px;
+}
+
+.side-nav h1 {
+	color:white;
+}
+
+.side-nav li {
+	color:white;
+  	float:left;
+  	display:inline;
+  	line-height:1.5em;
+  	width:50%;
+}
+
+#divisions {
+	padding-left:30px;
+}
+
+.division-btn {
+
+}
+
+.content {
+	float:left;
+}
