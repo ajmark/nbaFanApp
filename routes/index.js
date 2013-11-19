@@ -1,5 +1,9 @@
 var mongo = require("../models/mymongo.js");
 
+exports.headlines = function(req, res){
+  res.render('../views/index.ejs', {title:"headlines"});
+};
+
 exports.get = function(req, res){
 		mongo.find( "nba", 
 		            "teams", 

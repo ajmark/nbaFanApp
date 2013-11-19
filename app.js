@@ -14,5 +14,7 @@ app.configure(function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
   });
 
+app.get('/', routes.headlines);
+
 app.listen(3333);
 console.log("Express server listening to 3333");
