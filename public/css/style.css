@@ -12,6 +12,7 @@
 html, body {
 	font-family: 'Open Sans', sans-serif;
 	color: black;
+	overflow: hidden;
 }
 
 li {
@@ -30,8 +31,12 @@ a {
 /**************************/
 .side-nav {
 	background-color: #999999;
-	float:left;
-	width:270px;
+	float: left;
+	left: 300px;
+	margin-left: -300px;
+	position: relative;
+	width: 300px;
+	overflow-y: auto;
 }
 
 .side-nav h1 {
@@ -54,6 +59,20 @@ a {
 
 }
 
-.content {
-	float:left;
+.main-content {
+	margin-left: 300px;
+	padding-left:100px;
+	overflow-y: auto;
 }
+
+#content-wrapper{
+	float: left;
+	width: 100%;
+}
+
+#headlines {
+	padding-bottom: 100px;
+}
+
+
+
