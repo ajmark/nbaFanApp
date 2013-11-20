@@ -30,10 +30,18 @@ function getLeagueNews() {
 	}).done(function(data){
 		$("#headlines").empty();
 		for(i=0;i<data.headlines.length;i++){
+			var id = data.headlines[i].id;
 			var headline = data.headlines[i].headline;
-			var url = data.headlines[i].images[0].url; 
-			$("#headlines").append("<h2>"+headline+"</h2>");
-			$("#headlines").append("<img src='"+url+"'>");
+			var link = data.headlines[0].links.web.href;
+			var description = data.headlines[i].description;
+			$("#headlines").append("<div id='"+id+"' class='headline-box'></div>")
+			$("#"+id).append("<h2>"+headline+"</h2>");
+			if (data.headlines[i].images.length > 0){
+				var url = data.headlines[i].images[0].url;
+				$("#"+id).append("<img src='"+url+"'>");
+			};
+			$("#"+id).append("<p>"+description+"</p>");
+			$("#"+id).append("<a href='"+link+"' target='_blank'>Read More</a>")
 		};
 
 	}); 
