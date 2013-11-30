@@ -4,6 +4,10 @@ exports.headlines = function(req, res){
   res.render('../views/index.ejs', {title:"headlines"});
 };
 
+exports.fanmap = function(req, res){
+  res.render('../views/fanmap.ejs', {title:"fanmap"});
+};
+
 exports.get = function(req, res){
 		mongo.find( "nba", 
 		            "teams", 
