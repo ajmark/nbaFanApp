@@ -13,6 +13,7 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 	color: black;
 	overflow: hidden;
+	height:100%;
 }
 
 li {
@@ -143,6 +144,10 @@ h5 {
 	font-weight:300;
 	padding-bottom:15px;
 	font-size:14px;
+}
+
+#navigation a {
+	color:black;
 }
 
 #navigation a:hover{

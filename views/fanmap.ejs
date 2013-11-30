@@ -1,11 +1,15 @@
-<!Doctype HTML>
+<!DOCTYPE html>
 <html>
 <head>
 	<!-- Javascript -->
 	<script src="/js/jquery-2.0.3.js"></script>
 	<script src="/js/main.js"></script>
+	<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0nVFM9hA57sfcbLbDpT5ozkcD_O_0-Ok&sensor=true">
+    </script>
 	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/fanmap.css">
 	<title>NBA FanApp</title>
 </head>
 <body>
@@ -16,7 +20,7 @@
 		<div id="navigation">
 			<h3>Navigate to...</h3>
 			<ul>
-				<li><a>League News &raquo;</a></li>
+				<li><a href="/">League News &raquo;</a></li>
 				<li><a>Fan Map &raquo;</a></li>
 			</ul>
 		</div>
@@ -25,14 +29,14 @@
 	<div id="content-wrapper">
 		<div class="main-content">
 			<header>
-				<img id="espn" src="http://a.espncdn.com/i/apis/attribution/espn-grey_50.png">
+				<a href="http://espn.go.com/nba/" target="_blank"><img id="espn" src="http://a.espncdn.com/i/apis/attribution/espn-grey_50.png"></a>
 				<h1>The Unofficial</h1>
 				<img src="/assets/logo.png">
 				<h1>Fan App</h1>
 			</header>
 
-			<h1 id="title">League News</h1><br>
-			<div id="headlines"></div>
+			<h1 id="title">Fan Map</h1><br>
+			<div id="map-canvas" />
 		</div>
 	</div>
 	<footer></footer>
