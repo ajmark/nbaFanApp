@@ -26,20 +26,23 @@ a {
 }
 
 header {
-	padding-top:50px;
-	padding-bottom: 50px;
+	padding-top:20px;
+	padding-bottom: 30px;
 	overflow: hidden;
 }
 
 header h1 {
 	color: #ed174b;
 	font-weight: 300;
-	font-size:34px;
+	font-size:20px;
+	float:left;
+	clear:left;
 }
 
-header img {
+#logo {
 	position: relative;
 	float:left;
+	clear:both;
 }
 
 h5 {
@@ -47,6 +50,10 @@ h5 {
 	padding-left:10px;
 	display:table-cell;
 	vertical-align: middle;
+}
+
+#espn {
+	float:right;
 }
 
 /**************************/
@@ -161,13 +168,13 @@ h5 {
 
 
 .main-content {
-	margin-left: 300px;
+	margin-left: 230px;
 	padding-right: 100px;
 	padding-left:100px;
 	overflow-y: auto;
 }
 
-.main-content h1 {
+#title h1 {
 	clear:both;
 }
 
@@ -207,10 +214,6 @@ h5 {
 	padding-bottom: 50px;
 	float:left;
 	width:700px;
-}
-
-#espn {
-	float:right;
 }
 
 
