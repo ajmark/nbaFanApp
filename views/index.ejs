@@ -3,8 +3,9 @@
 <head>
 	<!-- Javascript -->
 	<script src="/js/jquery-2.0.3.js"></script>
-	<script src="/js/main.js"></script>
 	<script src="/js/headlines.js"></script>
+	<script src="/js/cookie.js"></script>
+	<script src="/js/main.js"></script>
 	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<title>NBA FanApp</title>
@@ -113,7 +114,48 @@
 				<img id="logo" src="/assets/logo.png">
 				<h1>Fan App</h1>
 			</header>
-
+			<!-- popup -->
+			<div id="cookie-popup" style="position: relative;">
+			  <div id="popup-dialog-cookie" class="popup-dialog">
+			    <div class="popcls"><a onclick="closepop();return false;" href="#">close</a></div>
+			      <p>Please select your favorite team</p>
+			      <form id="favteam-select">
+			      <select>
+			      	<option value="Atlanta Hawks">Atlanta Hawks</option>
+			      	<option value="Boston Celtics">Boston Celtics</option>
+			      	<option>Brooklyn Nets</option>
+			      	<option>Charlotte Bobcats</option>
+			      	<option>Chicago Bulls</option>
+			      	<option>Cleveland Cavaliers</option>
+			      	<option>Dallas Mavericks</option>
+			      	<option>Denver Nuggets</option>
+			      	<option>Detroit Pistons</option>
+			      	<option>Golden State Warriors</option>
+			      	<option>Houston Rockets</option>
+			      	<option>Indiana Pacers</option>
+			      	<option>Los Angeles Clippers</option>
+			      	<option>Los Angeles Lakers</option>
+			      	<option>Memphis Grizzlies</option>
+			      	<option>Miami Heat</option>
+			      	<option>Milwaukee Bucks</option>
+			      	<option>Minnesota Timberwolves</option>
+			      	<option>New Orleans Pelicans</option>
+			      	<option>New York Knicks</option>
+			      	<option>Oklahoma City Thunder</option>
+			      	<option>Orlando Magic</option>
+			      	<option>Philadelphia 76ers</option>
+			      	<option>Phoenix Suns</option>
+			      	<option>Portland Trail Blazers</option>
+			      	<option>Sacramento Kings</option>
+			      	<option>San Antonio Spurs</option>
+			      	<option>Toronto Raptors</option>
+			      	<option>Utah Jazz</option>
+			      	<option>Washington Wizards</option>
+			      </select>
+			      <input id="submit-favteam" type="submit" value="Submit" onclick="submitCookieInfo()">
+			  </form>
+			  </div>
+			</div>
 			<h1 id="title">League News</h1><br>
 			<div id="headlines"></div>
 		</div>

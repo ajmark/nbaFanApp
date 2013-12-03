@@ -170,7 +170,7 @@ h5 {
 .main-content {
 	margin-left: 230px;
 	padding-right: 100px;
-	padding-left:100px;
+	padding-left:175px;
 	overflow-y: auto;
 }
 
@@ -214,6 +214,38 @@ h5 {
 	padding-bottom: 50px;
 	float:left;
 	width:700px;
+}
+
+
+/**************************/
+/*   Popup Dialog    */
+/**************************/
+
+.popup-dialog {
+  background-color: #cccccc;
+  border: 1px solid #000000;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 2px 2px 2px #AAAAAA;
+  left: 25px;
+  padding: 10px 15px;
+  position: absolute;
+  width: 400px;
+  height:50px;
+  z-index: 100;
+}
+
+.popcls{
+  float:right;
+  display:block;
+  overflow:hidden;
+}
+
+#cookie-popup {
+  top: 20%;
+}
+
+#cookie-popup a:hover{
+  color:#ed174b;
 }
 
 

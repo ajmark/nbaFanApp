@@ -15,6 +15,8 @@ $(document).ready(function(){
 	});
 	hideElements();
 	selectorAction();
+	$('#cookie-popup').hide();
+	checkCookie();
 });
 
 function hideElements(){
