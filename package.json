@@ -1,9 +1,9 @@
 {
-  "name":"nbaFanApp",
-  "subdomain":"nbafanapp",
-  "author":"Alex Mark",
-  "description":"Final project for 67328. Practice using Node, mongo and deploying to cloud.",
-  "version": "0.0.1",
+  "name": "nbaFanApp",
+  "subdomain": "nbafanapp",
+  "author": "Alex Mark",
+  "description": "Final project for 67328. Practice using Node, mongo and deploying to cloud.",
+  "version": "0.0.1-1",
   "private": true,
   "scripts": {
     "start": "node app"
@@ -11,7 +11,7 @@
   "dependencies": {
     "express": "3.0.x",
     "ejs": "*",
-		"mongodb": "1.2.x"
+    "mongodb": "1.2.x"
   },
   "engines": {
     "node": ">=0.8"
