@@ -74,7 +74,7 @@ function getLocation(){
 		$.ajax({
 			url: "fanmap/location",
 			type:"put", 
-			data: {"c_id":id,"cookie":cookie,"lat":lat,"lngt":lngt},
+			data: {"c_id":id,"name":team,"lat":lat,"lngt":lngt},
 			statusCode: {
 				400: function(){
 					$(".main-content").prepend("<h1>Could not load content. 400 error.</h1>")
@@ -106,7 +106,7 @@ function getPins(){
 			}	
 		}
 	}).done(function(data){
-		console.log(data);
+		console.log(data.length);
 	});
 }
 

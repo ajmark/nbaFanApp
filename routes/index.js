@@ -12,7 +12,6 @@ exports.get = function(req, res){
 		mongo.find( "pins", 
 		            req.query,
 		            function(model) {
-		            	console.log(model);
 		            	res.json(model);
 		            }
 		);
