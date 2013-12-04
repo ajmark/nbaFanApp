@@ -9,21 +9,33 @@ exports.fanmap = function(req, res){
 };
 
 exports.get = function(req, res){
-		mongo.find( "nba", 
-		            "teams", 
+		mongo.find( "pins", 
 		            req.query,
 		            function(model) {
-		              res.render('index', {title: 'teams', obj: model});
-		              }
-		            );
+		            	console.log(model);
+		            	res.json(model);
+		            }
+		);
 }
 
 exports.put = function(req, res){
-		mongo.insert( "nba", 
-		              "teams", 
-		              req.body,
-		              function(model) {
-		                res.render('index', {title: 'teams', obj: model});
-		                }
-		              );
+	(checkUnique(req.body.c_id,
+		function(){
+			mongo.insert( "pins", 
+						req.body, 
+						function(model){ 
+							return model;
+						}
+			)
+		})
+	)};
+
+function checkUnique(c_id,callback) {
+	mongo.find( "pins", 
+		{"c_id":c_id},
+		function(model){
+			if (model.length < 1){
+				callback();
+			}
+		});
 }

@@ -16,6 +16,8 @@ app.configure(function(){
 
 app.get('/', routes.headlines);
 app.get('/fanmap', routes.fanmap);
+app.get('/fanmap/display',routes.get);
+app.put('/fanmap/location', routes.put);
 
 app.listen(3333);
 console.log("Express server listening to 3333");
