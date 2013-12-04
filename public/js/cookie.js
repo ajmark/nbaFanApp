@@ -34,6 +34,7 @@ function checkCookie() {
 
 var favteam=getCookie("favteam");
   if (favteam!=null && favteam!=""){
+    console.log(document.cookie);
     return;
   }
   else {
@@ -55,7 +56,10 @@ function donpopup() {
 
 function submitCookieInfo(){
   event.preventDefault();
-  
+  var select = document.getElementById("favteam-select");
+  var name = select.options[select.selectedIndex].text;
+  setCookie("favteam",name,365);
+  closepop();
 };
 
 function closepop() {
