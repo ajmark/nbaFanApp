@@ -54,7 +54,7 @@ function donpopup() {
 };
 
 function submitCookieInfo(){
-  event.preventDefault();
+  // event.preventDefault();
   var select = document.getElementById("favteam-select");
   var name = select.options[select.selectedIndex].text + "~" + (new Date()).getTime();
   setCookie("favteam",name,365);

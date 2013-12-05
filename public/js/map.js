@@ -1,6 +1,5 @@
 $(document).ready(function(){
-	initialize();
-	getPins();
+	google.maps.event.addDomListener(window, 'load', initialize);
 });
 
 function initialize() {
@@ -46,10 +45,9 @@ function initialize() {
   	var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
 
   	map.mapTypes.set("espn_fan_map", customMapType);
+
+  	getPins(map);
  }
-
- google.maps.event.addDomListener(window, 'load', initialize);
-
 
 function getLocation(){
   if (navigator.geolocation) {
@@ -93,7 +91,7 @@ function getLocation(){
   };
 };
 
-function getPins(){
+function getPins(map){
 	$.ajax({
 		url:"fanmap/display",
 		type:"get",
@@ -106,7 +104,23 @@ function getPins(){
 			}	
 		}
 	}).done(function(data){
-		console.log(data.length);
+		for (i=0; i < data.length; i++){
+			var latlng = new google.maps.LatLng(data[i].lat,data[i].lngt);
+			var marker = new google.maps.Marker({
+				position:latlng,
+				title:data[i].name,
+				map: map
+			});
+  			infoWindow = new google.maps.InfoWindow({
+  			    content: ""
+  			});
+    		google.maps.event.addListener(marker, 'click', function() { 
+    		   var contentString = "<h1>"+this.title+"</h1>";
+    		   infoWindow.setContent(contentString);
+    		   infoWindow.open(map,this); 
+    		}); 
+			console.log(marker)
+		};
 	});
 }
 
