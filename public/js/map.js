@@ -82,7 +82,8 @@ function getLocation(){
 				}	
 			}
 		}).done(function(data){
-
+			console.log("hello");
+			initialize();
 		});
   	});
   }
@@ -119,7 +120,7 @@ function getPins(map){
     		   infoWindow.setContent(contentString);
     		   infoWindow.open(map,this); 
     		}); 
-			console.log(marker)
+    		console.log(marker);
 		};
 	});
 }

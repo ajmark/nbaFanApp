@@ -17,17 +17,18 @@ exports.get = function(req, res){
 		);
 }
 
-exports.put = function(req, res){
-	(checkUnique(req.body.c_id,
+exports.put = function(req, res){(
+
+	checkUnique(req.body.c_id,
 		function(){
 			mongo.insert( "pins", 
 						req.body, 
 						function(model){ 
-							return model;
+							res.end();
 						}
 			)
 		})
-	)};
+)};
 
 function checkUnique(c_id,callback) {
 	mongo.find( "pins", 
