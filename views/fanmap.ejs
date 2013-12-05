@@ -39,6 +39,48 @@
 
 			<h1 id="title">Fan Map</h1><br />
 			<p>Use the Fan Map to see NBA fans across the country and who their favorite teams are. Submit your location by <a href="#" onclick="getLocation()">clicking here</a>. (Give it a few seconds to load)</p> <br />
+			<!-- popup -->
+			<div id="cookie-popup" style="position: relative;">
+			  <div id="popup-dialog-cookie" class="popup-dialog">
+			    <div class="popcls"><a onclick="closepop();return false;" href="#">close</a></div>
+			      <p>Please select your favorite team</p>
+			      <form>
+			      <select id="favteam-select">
+			      	<option>Atlanta Hawks</option>
+			      	<option>Boston Celtics</option>
+			      	<option>Brooklyn Nets</option>
+			      	<option>Charlotte Bobcats</option>
+			      	<option>Chicago Bulls</option>
+			      	<option>Cleveland Cavaliers</option>
+			      	<option>Dallas Mavericks</option>
+			      	<option>Denver Nuggets</option>
+			      	<option>Detroit Pistons</option>
+			      	<option>Golden State Warriors</option>
+			      	<option>Houston Rockets</option>
+			      	<option>Indiana Pacers</option>
+			      	<option>Los Angeles Clippers</option>
+			      	<option>Los Angeles Lakers</option>
+			      	<option>Memphis Grizzlies</option>
+			      	<option>Miami Heat</option>
+			      	<option>Milwaukee Bucks</option>
+			      	<option>Minnesota Timberwolves</option>
+			      	<option>New Orleans Pelicans</option>
+			      	<option>New York Knicks</option>
+			      	<option>Oklahoma City Thunder</option>
+			      	<option>Orlando Magic</option>
+			      	<option>Philadelphia 76ers</option>
+			      	<option>Phoenix Suns</option>
+			      	<option>Portland Trail Blazers</option>
+			      	<option>Sacramento Kings</option>
+			      	<option>San Antonio Spurs</option>
+			      	<option>Toronto Raptors</option>
+			      	<option>Utah Jazz</option>
+			      	<option>Washington Wizards</option>
+			      </select>
+			      <input type="submit" value="Submit" onclick="submitCookieInfo()">
+			  	  </form>
+			  </div>
+			</div>
 			<div id="map-canvas" />
 		</div>
 	</div>

@@ -47,7 +47,7 @@ var favteam=getCookie("favteam");
 
 function donpopup() {
   $('#cookie-popup').show();
-  $('header,#title,#headlines,#selector').fadeTo("fast",0.4, function(){
+  $('header,#title,#headlines,#selector,#map-canvas').fadeTo("fast",0.4, function(){
   });
   $('#selector').hide();
   return false;
@@ -63,7 +63,7 @@ function submitCookieInfo(){
 
 function closepop() {
   $('#cookie-popup').hide();
-  $('header,#title,#headlines,#selector').fadeTo("fast",1, function(){
+  $('header,#title,#headlines,#selector,#map-canvas').fadeTo("fast",1, function(){
   });
   $('#selector').show();
   $('#selector').css("display","table");
