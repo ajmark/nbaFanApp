@@ -13,6 +13,21 @@ $(document).ready(function(){
 		$('.side-nav, .main-content').css('height', currHeight);
 
 	});
+	if (document.documentElement.clientWidth <= 1080){
+		initSmallNav();
+	}
+	window.onresize = function(event) {
+		var nav = document.getElementById("small-nav");
+		if (document.documentElement.clientWidth > 1080) {
+			$('#small-nav').hide();
+		};
+		if (nav.childElementCount === 0){
+			initSmallNav();
+		} 
+		if (document.documentElement.clientWidth <= 1080) {
+			$('#small-nav').show();
+		};
+	};
 	hideElements();
 	selectorAction();
 	$('#cookie-popup').hide();
@@ -64,6 +79,13 @@ function selectorAction() {
 		$(".groupings").hide();
 		$("#divisions").show();
 	});
+}
+
+function initSmallNav(){
+	$("#small-nav").append("<ul id='navlist'></ul>")
+	$("#navlist").append("<li><a href='/'>League News &raquo;</a></li>")
+	$("#navlist").append("<li><a id='dropdown'>Team Select &raquo</a></li>")
+	$("#navlist").append("<li><a href='/fanmap'>Fan Map &raquo;</a></li>")
 }
 
 

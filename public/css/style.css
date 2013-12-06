@@ -25,6 +25,10 @@ a {
 	text-decoration: none;
 }
 
+/**************************/
+/*    Header   */
+/**************************/
+
 header {
 	padding-top:20px;
 	padding-bottom: 30px;
@@ -37,6 +41,10 @@ header h1 {
 	font-size:20px;
 	float:left;
 	clear:left;
+}
+
+#logo-area{
+	float:left;
 }
 
 #logo {
@@ -126,6 +134,7 @@ h5 {
 
 .groupings a {
 	color:white;
+	cursor:pointer;
 }
 
 .groupings a:hover {

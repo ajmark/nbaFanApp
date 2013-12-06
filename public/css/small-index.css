@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo|Open+Sans:400,300,700);
+
+/**************************/
+/*    HTML Elements & Template Layouts    */
+/**************************/
+
+* {
+	padding:0;
+	margin:0;
+}
+
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+	overflow: hidden;
+	height:100%;
+}
+
+
+/**************************/
+/*    Remove Side Nav    */
+/**************************/
+
+#side-nav, #selector {
+	display:none;	
+}
+
+/**************************/
+/*    Small Nav   */
+/**************************/
+
+#small-nav {
+	padding-left: 50px;
+	padding-top: 75px;
+	float:left;
+}
+
+#small-nav ul > li{
+    display: inline-block;   /* You can also add some margins here to make it look prettier */
+    zoom:1;
+    *display:inline; /* this fix is needed for IE7- */
+    padding-left:30px;
+}
+
+#small-nav a {
+	color:black;
+}
+
+#small-nav a:hover{
+	color:#ed174b;
+	cursor:pointer;
+}
+
+/**************************/
+/*    Main Content    */
+/**************************/
+
+.main-content {
+	margin-left:0px;
+	padding-left:200px;
+}
+
+#headlines img {
+	max-width:300px;
+	max-height:200px;
+}
+
+.headline-box {
+	width:600px;
+}
+
+
+
