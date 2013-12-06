@@ -30,7 +30,7 @@ $(document).ready(function(){
 	};
 	hideElements();
 	selectorAction();
-	touchActions();
+	clickActions();
 	$('#cookie-popup').hide();
 	checkCookie();
 });
@@ -89,6 +89,9 @@ function initSmallNav(){
 	$("#navlist").append("<li><a href='/fanmap'>Fan Map &raquo;</a></li>")
 }
 
+function clickActions(){
+	
+}
 
 
 
