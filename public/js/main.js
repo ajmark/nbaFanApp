@@ -30,6 +30,7 @@ $(document).ready(function(){
 	};
 	hideElements();
 	selectorAction();
+	touchActions();
 	$('#cookie-popup').hide();
 	checkCookie();
 });
