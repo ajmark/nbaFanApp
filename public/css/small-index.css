@@ -50,6 +50,49 @@ html, body {
 	color:#ed174b;
 	cursor:pointer;
 }
+#dropnav:hover {
+	background-color:#999999;
+}
+
+.dropdown {
+	display:none;
+	padding:6px;
+	background-color: #999999;
+	overflow:hidden;
+	width:515px;
+	position:absolute;
+	z-index: 1000;
+	right: 62px;
+	padding-top: 15px;
+	margin-top: 20px;
+}
+
+.dropdown li {
+	display: block !important;
+	border: none !important;
+	height: 24px !important;
+	line-height:24px;
+	width:140px;
+	font-size:12px;
+}
+.dropdown li a {
+	font-size:12px;
+	text-align:left !important;
+	color:#fff;
+}
+
+.navhead {
+	color: #006bb7;
+}
+
+.navhead:hover {
+	cursor:pointer !important;
+}
+
+.navbox {
+	float:left;
+	padding-bottom:20px;
+}
 
 /**************************/
 /*    Main Content    */

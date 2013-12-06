@@ -30,7 +30,6 @@ $(document).ready(function(){
 	};
 	hideElements();
 	selectorAction();
-	clickActions();
 	$('#cookie-popup').hide();
 	checkCookie();
 });
@@ -85,14 +84,38 @@ function selectorAction() {
 function initSmallNav(){
 	$("#small-nav").append("<ul id='navlist'></ul>")
 	$("#navlist").append("<li><a href='/'>League News &raquo;</a></li>")
-	$("#navlist").append("<li><a id='dropdown'>Team Select &raquo</a></li>")
+	$("#navlist").append("<li><a id='drop-nav'>Team Select &raquo</a></li>")
 	$("#navlist").append("<li><a href='/fanmap'>Fan Map &raquo;</a></li>")
+	clickActions();
 }
 
 function clickActions(){
+	var a = "<ul class='navbox'><li class='navhead'>Atlantic</li><li><a>Boston Celtics</a></li><li><a>Philadelphia 76ers</a></li><li><a>Toronto Raptors</a></li><li><a>New York Knicks</a></li><li><a>New Jersey Nets</a></li></ul>"
+	var c =  "<ul class='navbox'><li class='navhead'>Central</li><li><a>Indiana Pacers</a></li><li><a>Chicago Bulls</a></li><li><a>Detroit Pistons</a></li><li><a>Cleveland Cavaliers</a></li><li><a>Milwaukee Bucks</a></li></ul>"
+	var se =  "<ul class='navbox'><li class='navhead'>Southeast</li><li><a>Miami Heat</a></li><li><a>Atlanta Hawks</a></li><li><a>Charlotte Bobcats</a></li><li><a>Washington Wizards</a></li><li><a>Orlando Magic</a></li></ul>"
+	var nw =  "<ul class='navbox'><li class='navhead'>Northwest</li><li><a>Portland Trail Blazers</a></li><li><a>Oklahoma City Thunder</a></li><li><a>Denver Nuggets</a></li><li><a>Minnesota Timberwolves</a></li><li><a>Utah Jazz</a></li></ul?"
+	var p =  "<ul class='navbox'><li class='navhead'>Pacific</li><li><a>Los Angeles Clippers</a></li><li><a>Phoenix Suns</a></li><li><a>Golden State Warriors</a></li><li><a>Los Angeles Lakers</a></li><li><a>Sacramento Kings</a></li></ul>"
+	var sw =  "<ul class='navbox'><li class='navhead'>Southwest</li><li><a>San Antonio Spurs</a></li><li><a>Houston Rockets</a></li><li><a>Dallas Mavericks</a></li><li><a>Memphis Grizzlies</a></li><li><a>New Orleans Pelicans</a></li></ul>"
 	
+	$("#drop-nav").append("<div class='dropdown'></div>")
+	$("#drop-nav .dropdown").append(a);
+	$("#drop-nav .dropdown").append(c);
+	$("#drop-nav .dropdown").append(se);
+	$("#drop-nav .dropdown").append(nw);
+	$("#drop-nav .dropdown").append(p);
+	$("#drop-nav .dropdown").append(sw);
+
+	toggleMenu();
 }
 
+function toggleMenu(){
+	$('html').click(function() {
+	  $(".dropdown").hide();
+	});
 
-
+	$("#drop-nav").click(function(event){
+		event.stopPropagation();
+		$(".dropdown").show();
+	})
+}
 
