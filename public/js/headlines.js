@@ -48,7 +48,6 @@ function getLeagueNews() {
 };
 
 function getTeamNews(teamid) {
-	console.log("hello");
 	//gets json of headlines
 	$.ajax({
 		url:"http://api.espn.com/v1/sports/basketball/nba/news/?teams="+teamid+"&limit=30&apikey=7efmy99vrj5rz4g35bmdep5u",
@@ -64,7 +63,7 @@ function getTeamNews(teamid) {
 		headlinedata = data;
 		var teams = {"2":"Boston Celtics","20":"Philadelphia 76ers","28":"Toronto Raptors","18":"New York Knicks","17":"New Jersey Nets","11":"Indiana Pacers","4":"Chicago Bulls","8":"Detroit Pistons","5":"Cleveland Cavaliers","15":"Milwaukee Bucks","14":"Miami Heat","1":"Atlanta Hawks","30":"Charlotte Bobcats","27":"Washington Wizards","19":"Orlando Magic","22":"Portland Trail Blazers","25":"Oklahoma City Thunder","7":"Denver Nuggets","16":"Minnesota Timberwolves","26":"Utah Jazz","12":"Los Angeles Clippers","21":"Phoenix Suns","13":"Los Angeles Lakers","9":"Golden State Warriors","23":"Sacramento Kings","24":"San Antonio Spurs","10":"Houston Rockets","6":"Dallas Mavericks","29":"Memphis Grizzlies","3":"New Orleans Pelicans"}
 		document.getElementById("title").innerHTML = teams[teamid] + " News";
-
+		
 		//clears the page
 		$("#headlines").empty();
 		//iterates through headline data and displays html

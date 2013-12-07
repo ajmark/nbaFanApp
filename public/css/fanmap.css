@@ -6,3 +6,7 @@
 #map-canvas h1 {
 	font-size:16px;
 }
+
+#drop-nav {
+	display:none;
+}

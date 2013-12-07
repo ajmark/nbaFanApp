@@ -120,9 +120,6 @@ function toggleMenu(){
 }
 
 function navigateTeamPage(teamid){
-	window.location.href = "/"
-	$(document).ready(function(){
-		getTeamNews(teamid);
-	});	
+	getTeamNews(teamid);
 }
 
