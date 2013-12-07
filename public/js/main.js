@@ -90,12 +90,12 @@ function initSmallNav(){
 }
 
 function clickActions(){
-	var a = "<ul class='navbox'><li class='navhead'>Atlantic</li><li><a>Boston Celtics</a></li><li><a>Philadelphia 76ers</a></li><li><a>Toronto Raptors</a></li><li><a>New York Knicks</a></li><li><a>New Jersey Nets</a></li></ul>"
-	var c =  "<ul class='navbox'><li class='navhead'>Central</li><li><a>Indiana Pacers</a></li><li><a>Chicago Bulls</a></li><li><a>Detroit Pistons</a></li><li><a>Cleveland Cavaliers</a></li><li><a>Milwaukee Bucks</a></li></ul>"
-	var se =  "<ul class='navbox'><li class='navhead'>Southeast</li><li><a>Miami Heat</a></li><li><a>Atlanta Hawks</a></li><li><a>Charlotte Bobcats</a></li><li><a>Washington Wizards</a></li><li><a>Orlando Magic</a></li></ul>"
-	var nw =  "<ul class='navbox'><li class='navhead'>Northwest</li><li><a>Portland Trail Blazers</a></li><li><a>Oklahoma City Thunder</a></li><li><a>Denver Nuggets</a></li><li><a>Minnesota Timberwolves</a></li><li><a>Utah Jazz</a></li></ul?"
-	var p =  "<ul class='navbox'><li class='navhead'>Pacific</li><li><a>Los Angeles Clippers</a></li><li><a>Phoenix Suns</a></li><li><a>Golden State Warriors</a></li><li><a>Los Angeles Lakers</a></li><li><a>Sacramento Kings</a></li></ul>"
-	var sw =  "<ul class='navbox'><li class='navhead'>Southwest</li><li><a>San Antonio Spurs</a></li><li><a>Houston Rockets</a></li><li><a>Dallas Mavericks</a></li><li><a>Memphis Grizzlies</a></li><li><a>New Orleans Pelicans</a></li></ul>"
+	var a = "<ul class='navbox'><li class='navhead'>Atlantic</li><li><a onclick='navigateTeamPage(2)'>Boston Celtics</a></li><li><a onclick='navigateTeamPage(20)'>Philadelphia 76ers</a></li><li><a onclick='navigateTeamPage(28)'>Toronto Raptors</a></li><li><a onclick='navigateTeamPage(18)'>New York Knicks</a></li><li><a onclick='navigateTeamPage(17)'>New Jersey Nets</a></li></ul>"
+	var c =  "<ul class='navbox'><li class='navhead'>Central</li><li><a onclick='navigateTeamPage(11)'>Indiana Pacers</a></li><li><a onclick='navigateTeamPage(4)'>Chicago Bulls</a></li><li><a onclick='navigateTeamPage(8)'>Detroit Pistons</a></li><li><a onclick='navigateTeamPage(5)'>Cleveland Cavaliers</a></li><li><a onclick='navigateTeamPage(15)'>Milwaukee Bucks</a></li></ul>"
+	var se =  "<ul class='navbox'><li class='navhead'>Southeast</li><li><a onclick='navigateTeamPage(14)'>Miami Heat</a></li><li><a onclick='navigateTeamPage(1)'>Atlanta Hawks</a></li><li><a onclick='navigateTeamPage(30)'>Charlotte Bobcats</a></li><li><a onclick='navigateTeamPage(27)'>Washington Wizards</a></li><li><a onclick='navigateTeamPage(19)'>Orlando Magic</a></li></ul>"
+	var nw =  "<ul class='navbox'><li class='navhead'>Northwest</li><li><a onclick='navigateTeamPage(22)'>Portland Trail Blazers</a></li><li><a onclick='navigateTeamPage(25)'>Oklahoma City Thunder</a></li><li><a onclick='navigateTeamPage(7)'>Denver Nuggets</a></li><li><a onclick='navigateTeamPage(16)'>Minnesota Timberwolves</a></li><li><a onclick='navigateTeamPage(26)'>Utah Jazz</a></li></ul?"
+	var p =  "<ul class='navbox'><li class='navhead'>Pacific</li><li><a onclick='navigateTeamPage(12)'>Los Angeles Clippers</a></li><li><a onclick='navigateTeamPage(21)'>Phoenix Suns</a></li><li><a onclick='navigateTeamPage(9)'>Golden State Warriors</a></li><li><a onclick='navigateTeamPage(13)'>Los Angeles Lakers</a></li><li><a onclick='navigateTeamPage(23)'>Sacramento Kings</a></li></ul>"
+	var sw =  "<ul class='navbox'><li class='navhead'>Southwest</li><li><a onclick='navigateTeamPage(24)'>San Antonio Spurs</a></li><li><a onclick='navigateTeamPage(10)'>Houston Rockets</a></li><li><a onclick='navigateTeamPage(6)'>Dallas Mavericks</a></li><li><a onclick='navigateTeamPage(29)'>Memphis Grizzlies</a></li><li><a onclick='navigateTeamPage(3)'>New Orleans Pelicans</a></li></ul>"
 	
 	$("#drop-nav").append("<div class='dropdown'></div>")
 	$("#drop-nav .dropdown").append(a);
@@ -117,5 +117,12 @@ function toggleMenu(){
 		event.stopPropagation();
 		$(".dropdown").show();
 	})
+}
+
+function navigateTeamPage(teamid){
+	window.location.href = "/"
+	$(document).ready(function(){
+		getTeamNews(teamid);
+	});	
 }
 

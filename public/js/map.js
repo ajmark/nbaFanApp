@@ -52,14 +52,12 @@ function initialize() {
 function getLocation(){
   if (navigator.geolocation) {
   	navigator.geolocation.getCurrentPosition(function(position){
-  		console.log(document.cookie);
   		var lat = position.coords.latitude;
     	var lngt = position.coords.longitude;
     	var cookie = document.cookie;
 
     	//formats the cookie data to get the team name and cookie id
     	cookie = cookie.split("=");
-    	console.log(cookie);
     	data = cookie[1];
     	var data = (data.split("%7E"));
     	var id = data[1];
@@ -67,8 +65,6 @@ function getLocation(){
 		team = team.split("%20");
     	team = team.join(" ");
 
-    	console.log(team);
-    	console.log(id);
 		$.ajax({
 			url: "fanmap/location",
 			type:"put", 
@@ -82,7 +78,6 @@ function getLocation(){
 				}	
 			}
 		}).done(function(data){
-			console.log("hello");
 			initialize();
 		});
   	});
@@ -120,7 +115,6 @@ function getPins(map){
     		   infoWindow.setContent(contentString);
     		   infoWindow.open(map,this); 
     		}); 
-    		console.log(marker);
 		};
 	});
 }

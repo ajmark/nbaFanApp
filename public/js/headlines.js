@@ -48,6 +48,7 @@ function getLeagueNews() {
 };
 
 function getTeamNews(teamid) {
+	console.log("hello");
 	//gets json of headlines
 	$.ajax({
 		url:"http://api.espn.com/v1/sports/basketball/nba/news/?teams="+teamid+"&limit=30&apikey=7efmy99vrj5rz4g35bmdep5u",
