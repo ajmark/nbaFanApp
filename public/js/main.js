@@ -104,7 +104,6 @@ function clickActions(){
 	$("#drop-nav .dropdown").append(nw);
 	$("#drop-nav .dropdown").append(p);
 	$("#drop-nav .dropdown").append(sw);
-
 	toggleMenu();
 }
 

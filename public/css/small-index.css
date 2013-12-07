@@ -93,6 +93,7 @@ html, body {
 .navbox {
 	float:left;
 	padding-bottom:20px;
+	padding-top:20px;
 }
 
 /**************************/
@@ -101,7 +102,7 @@ html, body {
 
 .main-content {
 	margin-left:0px;
-	padding-left:200px;
+	padding-left:100px;
 }
 
 #headlines img {
