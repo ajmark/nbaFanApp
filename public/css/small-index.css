@@ -96,6 +96,17 @@ html, body {
 	padding-top:20px;
 }
 
+
+#drophead {
+	float:left;
+	width:100%;
+	padding-left:50px;
+}
+
+#drophead h1 {
+	color:white;
+	font-size:14px;
+}
 /**************************/
 /*    Main Content    */
 /**************************/

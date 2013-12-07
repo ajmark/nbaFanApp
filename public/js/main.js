@@ -97,13 +97,14 @@ function clickActions(){
 	var p =  "<ul class='navbox'><li class='navhead'>Pacific</li><li><a onclick='navigateTeamPage(12)'>Los Angeles Clippers</a></li><li><a onclick='navigateTeamPage(21)'>Phoenix Suns</a></li><li><a onclick='navigateTeamPage(9)'>Golden State Warriors</a></li><li><a onclick='navigateTeamPage(13)'>Los Angeles Lakers</a></li><li><a onclick='navigateTeamPage(23)'>Sacramento Kings</a></li></ul>"
 	var sw =  "<ul class='navbox'><li class='navhead'>Southwest</li><li><a onclick='navigateTeamPage(24)'>San Antonio Spurs</a></li><li><a onclick='navigateTeamPage(10)'>Houston Rockets</a></li><li><a onclick='navigateTeamPage(6)'>Dallas Mavericks</a></li><li><a onclick='navigateTeamPage(29)'>Memphis Grizzlies</a></li><li><a onclick='navigateTeamPage(3)'>New Orleans Pelicans</a></li></ul>"
 	
-	$("#drop-nav").append("<div class='dropdown'></div>")
+	$("#drop-nav").append("<div class='dropdown'></div>");
 	$("#drop-nav .dropdown").append(a);
 	$("#drop-nav .dropdown").append(c);
 	$("#drop-nav .dropdown").append(se);
 	$("#drop-nav .dropdown").append(nw);
 	$("#drop-nav .dropdown").append(p);
 	$("#drop-nav .dropdown").append(sw);
+	$("#drop-nav .dropdown").prepend("<div id='drophead'><h1>(Click off menu to close)</h1></div>");
 	toggleMenu();
 }
 
