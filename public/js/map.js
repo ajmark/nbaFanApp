@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	//loads the google map
 	google.maps.event.addDomListener(window, 'load', initialize);
 });
 
@@ -100,6 +101,7 @@ function getPins(map){
 			}	
 		}
 	}).done(function(data){
+		//After pins collected from database, displays them on map 
 		for (i=0; i < data.length; i++){
 			var latlng = new google.maps.LatLng(data[i].lat,data[i].lngt);
 			var marker = new google.maps.Marker({

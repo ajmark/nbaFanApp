@@ -23,7 +23,7 @@ function getCookie(c_name) {
 };
 
 function setCookie(c_name,value,exdays) {
-  
+  //sets the cookie value 
   var exdate=new Date();
   exdate.setDate(exdate.getDate() + exdays);
   var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
@@ -31,8 +31,8 @@ function setCookie(c_name,value,exdays) {
 };
 
 function checkCookie() {
-
-var favteam=getCookie("favteam");
+  //checks the current cookie data 
+  var favteam=getCookie("favteam");
   if (favteam!=null && favteam!=""){
     return;
   }
@@ -53,6 +53,7 @@ function donpopup() {
   return false;
 };
 
+//submits the cookie data from the popup and sets the cookie
 function submitCookieInfo(){
   // event.preventDefault();
   var select = document.getElementById("favteam-select");

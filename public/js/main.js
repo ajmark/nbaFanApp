@@ -13,9 +13,11 @@ $(document).ready(function(){
 		$('.side-nav, .main-content').css('height', currHeight);
 
 	});
+	//Checks for mobile screens
 	if (document.documentElement.clientWidth <= 1080){
 		initSmallNav();
 	}
+	//Checks screensize changes 
 	window.onresize = function(event) {
 		var nav = document.getElementById("small-nav");
 		if (document.documentElement.clientWidth > 1080) {
